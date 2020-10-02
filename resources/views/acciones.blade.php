@@ -8,7 +8,7 @@
             <input type="file" name="archivo" required>
              <br><br>
             <label for="">Seleccione la empresa:</label>
-            <select name="empresa" id="">
+            <select name="nombre" id="">
             <option value="">Seleccione una opcion</option>
             @foreach ($empresas as $empresa)
             <option value="{{$empresa->nombre}}">{{$empresa->nombre}}</option>

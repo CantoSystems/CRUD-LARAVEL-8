@@ -15,7 +15,10 @@ class ArchivoController extends Controller
 
   public function subir(Request $request)
   {
-         $request->file('archivo')->store('public'.'/'.$request->empresa);
+    $file= $request->file('archivo');
+    $name=$file->getClientOriginalName();
+    $ruta=public_path().'/'.$request->nombre;
+    $file->move($ruta,$name);
          dd("subido y guardado");
   }
 }
